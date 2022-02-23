@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="main.css" />
+  <title>MacDon</title>
+  <link rel="icon" href="favicon\favicon-32x32.png" type="image/x-icon">
+<link rel="icon" type="image/png" href="favicon.png">
+  <div class="break">
+    <center>
+  <h1>Breakfast</h1>
+  <audio id="myAudio" controls>
+
+    <source src="image/morning-garden-acoustic-chill-15013.mp3" type="audio/ogg">
+    <source src="image/morning-garden-acoustic-chill-15013.mp3" type="audio/mpeg">
+
+  </audio>
+
+  <div onmouseover="mOver(this)" onmouseout="mOut(this)">
+A delicious breakfast is.... </div>
+
+<script>
+function mOver(obj) {
+  obj.innerHTML = "... A separate feast in life."
+}
+function mOut(obj) {
+  obj.innerHTML = "A delicious breakfast is..."
+}
+</script>
+</center>
+<img id="bread" src="image/IMG_6573.GIF" height="200px">
+<script>
+   bread.onclick = function() {
+     let start = Date.now();
+     let timer = setInterval(function() {
+       let timePassed = Date.now() - start;
+       bread.style.left = timePassed / 2 + 'px';
+       if (timePassed > 3000) clearInterval(timer);
+     }, 20);
+   }
+</script>
+<center>
+<p>
+  <img src="image/IMG_6546.PNG" height="400px">
+  <img src="image/IMG_6570.PNG" height="400px">
+  <img src="image/IMG_6571.PNG" height="400px">
+</p>
+
+
+
+  <p id="demo">Were you able to cook?</p>
+
+  <button type="button" onclick='document.getElementById("demo").innerHTML = "Good job!"'>Yes</button>
+
+
+
+
+  </center>
+  </div>

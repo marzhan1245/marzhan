@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="main.css" />
+  <title>MacDon</title>
+  <link rel="shortcut icon" href="ico.jpeg" type="image/x-icon" />
+  <link rel="icon" href="favicon\favicon-32x32.png" type="image/x-icon">
+<link rel="icon" type="image/png" href="favicon.png">
+  </head>
+
+    <div class="break">
+      <center>
+
+
+
+    <h1>Salads</h1>
+    <audio id="myAudio" controls>
+      <source src="image/both-of-us-14037.mp3" type="audio/ogg">
+      <source src="image/both-of-us-14037.mp3" type="audio/mpeg">
+
+    </audio>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)">
+A salad will say… </div>
+
+    <script>
+function mOver(obj) {
+  obj.innerHTML = "... NO to calories"
+}
+function mOut(obj) {
+  obj.innerHTML = "A salad will say..."
+}
+</script>
+</center>
+<img id="carrot" src="image/IMG_6574.GIF" height="200px">
+<script>
+   carrot.onclick = function() {
+     let start = Date.now();
+     let timer = setInterval(function() {
+       let timePassed = Date.now() - start;
+       carrot.style.left = timePassed / 2 + 'px';
+       if (timePassed > 3000) clearInterval(timer);
+     }, 20);
+   }
+</script>
+<center>
+<p>
+    <img src="image/IMG_6548.PNG" height="400px">
+    <img src="image/IMG_6547.PNG" height="400px">
+    <img src="image/IMG_6569.PNG" height="400px">
+  </p>
+    <p id="demo">Were you able to cook?</p>
+
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "Good job!"'>Yes</button>
+
+      </center>
+      </div>
+
+
+
+
+      </html>

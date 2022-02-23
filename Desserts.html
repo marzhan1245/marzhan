@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="main.css" />
+  <title>MacDon</title>
+  <link rel="icon" href="favicon\favicon-32x32.png" type="image/x-icon">
+<link rel="icon" type="image/png" href="favicon.png">
+  <div class="break">
+
+  </head>
+  <center>
+    <h1>Desserts</h1>
+    <audio id="myAudio" controls>
+      <source src="image/Lollipop.mp3" type="audio/ogg">
+      <source src="image/Lollipop.mp3" type="audio/mpeg">
+
+    </audio>
+    <div onmouseover="mOver(this)" onmouseout="mOut(this)">
+Life is too short... </div>
+
+<script>
+function mOver(obj) {
+  obj.innerHTML = "... So start with dessert."
+}
+function mOut(obj) {
+  obj.innerHTML = "Life is too short..."
+}
+</script>
+</center>
+
+<img id="cake" src="image/IMG_6572.GIF" height="200px">
+<script>
+   cake.onclick = function() {
+     let start = Date.now();
+     let timer = setInterval(function() {
+       let timePassed = Date.now() - start;
+       cake.style.left = timePassed / 2 + 'px';
+       if (timePassed > 3000) clearInterval(timer);
+     }, 20);
+   }
+</script>
+
+<center>
+  <p>
+      <img src="image/IMG_6550.PNG" height="400px">
+      <img src="image/IMG_6551.PNG" height="400px">
+      <img src="image/IMG_6549.PNG" height="400px">
+    </p>
+      <p id="demo">Were you able to cook?</p>
+
+      <button type="button" onclick='document.getElementById("demo").innerHTML = "Good job!"'>Yes</button>
+
+
+  </center>
+
+
+
+
+
+
+      </html>
